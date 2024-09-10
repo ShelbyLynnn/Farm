@@ -1,5 +1,5 @@
 /* -------------------- IMPORTED FONTS -------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
 /*-------------------- CSS RESET ---------------------------------------------------*/
 /* CSS Reset */
 * {
@@ -32,8 +32,92 @@ ul, ol {
 }
 /* -------------------- ROOT VARIABLES --------------------------------------- */
 :root {
-    --main-bg-color: #fff
-  }
+    --primary-color: #06A816;
+    --secondary-color: #E75D02;
+    --font-color-one: #000;
+    --font-color-two: #fff;
+    --main-font: 'Habibi', sans-serif;
+    --heading-font: 'Irish Grover', cursive;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--font-color-two);
+    font-family: var(--heading-font);
+    text-shadow: 
+    1px 1px 0 var(--font-color-one), 
+   -1px 1px 0 var(--font-color-one), 
+    1px -1px 0 var(--font-color-one), 
+   -1px -1px 0 var(--font-color-one);
+}
+
+h2 {
+    font-size: 1.75em;
+    font-family: var(--heading-font);
+    padding: .5em 0 .5em 0;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-family: var(--heading-font);
+}
+
+small {
+    color: var(--font-color-two);
+}
+
+p {
+    font-family: var(--main-font);
+    font-size: 12px;
+}
+
+main {
+    padding: 1em;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 5px;
+    display: flex;
+}
+
+#header-content {
+    width: 50%;
+    padding: 2px;
+}
+
+
+nav {
+    width: 50%;
+    display: flex;
+    place-items: center;
+    gap: 1em;
+}
+
+button {
+    color: var(--font-color-two);
+    font-size: 12px;
+    width: 200px;
+    padding: .3em;
+    height: auto;
+    background-color: var(--secondary-color);
+    border: var(--font-color-two) 1px solid;
+}
+
+#produce {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+section h3 {
+    text-align: center;
+    padding: 1em;
+ }
+
+
+
+
+
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
