@@ -30,6 +30,10 @@ a {
 ul, ol {
     list-style: none;
 }
+
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+
 /* -------------------- ROOT VARIABLES --------------------------------------- */
 :root {
     --primary-color: #06A816;
@@ -39,6 +43,7 @@ ul, ol {
     --main-font: 'Habibi', sans-serif;
     --heading-font: 'Irish Grover', cursive;
 }
+
 
 h1 {
     font-size: 2.5em;
@@ -71,54 +76,192 @@ p {
     font-size: 12px;
 }
 
-main {
-    padding: 1em;
-}
-
 header {
-    background-color: var(--primary-color);
-    padding: 5px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #header-content {
-    width: 50%;
+    width: 100%;
     padding: 2px;
+    text-align: center;
+    background-color: var(--primary-color);
 }
 
 
 nav {
-    width: 50%;
+    width: 100%;
     display: flex;
-    place-items: center;
-    gap: 1em;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    gap: .5em
 }
 
 button {
     color: var(--font-color-two);
     font-size: 12px;
     width: 200px;
-    padding: .3em;
+    padding: .4em;
     height: auto;
     background-color: var(--secondary-color);
     border: var(--font-color-two) 1px solid;
 }
 
-#produce {
+section {
+    padding: .5em;
+}
+
+.produce {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr; 
     place-items: center;
 }
 section h3 {
     text-align: center;
     padding: 1em;
- }
+}
+
+.produce-box {
+    position: relative;
+    display: inline-block; 
+    padding: 1em;
+}
+
+.produce-box img {
+    display: block;
+    width: 100%; 
+}
+
+.produce-box a {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: var(--font-color-two); 
+    padding: 0.5em 1em; 
+    text-align: center;
+    text-decoration: none;
+    z-index: 10; 
+    display: inline-block; 
+}
+
+.produce-box a:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+#contact {
+    background-color: var(--primary-color);
+    color: var(--font-color-two);
+    margin: 0 auto;
+    text-align: center;
+    padding: .5em;
+    width: 100%;
+    align-items: center;
+}
+
+address {
+    font-size: 12px;
+    font-family: var(--main-font);
+    width: 100%;
+}
+
+#address {
+    width: 100%;
+
+}
+
+#hours {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    color: var(--primary-color);
+}
 
 
 
 
-
-/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 834px) { 
+    .produce {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #contact {
+        display: flex;
+        justify-content: center;
+    }
+
+    #address {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+    }
+    
+    #hours {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media (min-width: 1280px) {
+    .produce {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--primary-color);
+        width: 100%;
+    }
+    
+    #header-content {
+        width: 50%;
+        padding: 2px;
+        text-align: center;
+    }
+    
+    
+    nav {
+        width: 50%;
+        display: flex;
+            
+        padding: 1em;
+        gap: .5em
+    }
+    
+    button {
+        color: var(--font-color-two);
+        font-size: 12px;
+        width: 200px;
+        padding: .4em;
+        height: auto;
+        background-color: var(--secondary-color);
+        border: var(--font-color-two) 1px solid;
+    }
+    
+  }
+
+
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+
+@media (min-width: 1440px) {
+    .produce {
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+    }
+}
