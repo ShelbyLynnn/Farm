@@ -207,6 +207,10 @@ footer {
         justify-content: center;
 
     }
+
+    address {
+        width: 40%;
+    }
     
     #hours {
         width: 50%;
